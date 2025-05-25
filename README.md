@@ -9,6 +9,9 @@
 
 **ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. Ideal para criar, gerenciar e redirecionar links curtos de forma rápida e eficiente.
 
+Esse projeto também tem em JAVA 17
+- Acesse: [ShortMyUrl-JAVA](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-JAVA?tab=readme-ov-file)
+
 ## 🚀 Tecnologias
 
 - .NET 8 (ASP.NET Core)
@@ -35,7 +38,7 @@ Camada de persistência de dados. Responsável por interagir com o MongoDB, util
 
 ## 🛠️ Como rodar o projeto
 
-### Pré-requisitos
+### ✅ Pré-requisitos
 
 - [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - [Docker](https://www.docker.com/)
@@ -60,6 +63,12 @@ Abra um terminal onde o arquivo **docker-compose.yml** está e rode o comando ab
 ```bash
 docker compose up --build
 ```
+
+<hr>
+
+### Caso seu projeto não consiga se conectar ao container do MongoDB, troque a ConectString de mongodb://seu-endereço-de-ip:27017
+
+<hr>
 
 Acesse em: [http://localhost:8081/swagger](http://localhost:8081/swagger)
 
