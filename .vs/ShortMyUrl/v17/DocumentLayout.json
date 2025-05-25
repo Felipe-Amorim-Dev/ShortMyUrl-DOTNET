@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A118FCE-CC2B-4FF9-BCD0-CEA079551554}|ShortMyUrl.API\\ShortMyUrl.API.csproj|c:\\users\\felipe amorim\\projetos\\pessoal\\dotnet\\shortmyurl\\shortmyurl.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2A118FCE-CC2B-4FF9-BCD0-CEA079551554}|ShortMyUrl.API\\ShortMyUrl.API.csproj|solutionrelative:shortmyurl.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A118FCE-CC2B-4FF9-BCD0-CEA079551554}|ShortMyUrl.API\\ShortMyUrl.API.csproj|c:\\users\\felipe amorim\\projetos\\pessoal\\dotnet\\shortmyurl\\shortmyurl.api\\extensions\\mongodbextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A118FCE-CC2B-4FF9-BCD0-CEA079551554}|ShortMyUrl.API\\ShortMyUrl.API.csproj|solutionrelative:shortmyurl.api\\extensions\\mongodbextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A118FCE-CC2B-4FF9-BCD0-CEA079551554}|ShortMyUrl.API\\ShortMyUrl.API.csproj|c:\\users\\felipe amorim\\projetos\\pessoal\\dotnet\\shortmyurl\\shortmyurl.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2A118FCE-CC2B-4FF9-BCD0-CEA079551554}|ShortMyUrl.API\\ShortMyUrl.API.csproj|solutionrelative:shortmyurl.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MongoDBExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\ShortMyUrl.API\\Extensions\\MongoDBExtension.cs",
+              "RelativeDocumentMoniker": "ShortMyUrl.API\\Extensions\\MongoDBExtension.cs",
+              "ToolTip": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\ShortMyUrl.API\\Extensions\\MongoDBExtension.cs",
+              "RelativeToolTip": "ShortMyUrl.API\\Extensions\\MongoDBExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T00:58:20.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\ShortMyUrl.API\\appsettings.json",
+              "RelativeDocumentMoniker": "ShortMyUrl.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\ShortMyUrl.API\\appsettings.json",
+              "RelativeToolTip": "ShortMyUrl.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-25T00:47:19.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\ShortMyUrl.API\\Dockerfile",
+              "RelativeDocumentMoniker": "ShortMyUrl.API\\Dockerfile",
+              "ToolTip": "C:\\Users\\Felipe Amorim\\Projetos\\Pessoal\\DotNet\\ShortMyUrl\\ShortMyUrl.API\\Dockerfile",
+              "RelativeToolTip": "ShortMyUrl.API\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-25T00:42:14.003Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

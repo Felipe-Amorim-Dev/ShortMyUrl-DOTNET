@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "1DDF2B8jsjaWiLzumwLVTRvl+HGlFKNI3QjgtFAzc48=",
+  "Source": "ShortMyUrl.API",
+  "BasePath": "_content/ShortMyUrl.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

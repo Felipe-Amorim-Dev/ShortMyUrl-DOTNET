@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "ShortMyUrl.API.Controllers.UrlCOntroller",
+    "Method": "EncurtarUrl",
+    "RelativePath": "api/url/encurtar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ShortMyUrl.Domain.DTOs.UrlDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShortMyUrl.API.Controllers.UrlCOntroller",
+    "Method": "DeletarUrl",
+    "RelativePath": "api/url/excluir",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ShortMyUrl.Domain.DTOs.UrlDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

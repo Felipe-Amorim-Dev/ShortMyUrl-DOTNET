@@ -1,0 +1,15 @@
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\bin\Debug\net8.0\ShortMyUrl.Data.deps.json
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\bin\Debug\net8.0\ShortMyUrl.Data.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\bin\Debug\net8.0\ShortMyUrl.Data.pdb
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\bin\Debug\net8.0\ShortMyUrl.Domain.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\bin\Debug\net8.0\ShortMyUrl.Domain.pdb
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.csproj.AssemblyReference.cache
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.AssemblyInfoInputs.cache
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.AssemblyInfo.cs
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyU.577D1F7F.Up2Date
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\refint\ShortMyUrl.Data.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ShortMyUrl.Data.pdb
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Data\obj\Debug\net8.0\ref\ShortMyUrl.Data.dll

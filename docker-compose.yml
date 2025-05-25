@@ -1,0 +1,18 @@
+services:
+  shortmyurl-api:
+    build:
+      context: .
+      dockerfile: ShortMyUrl.API/Dockerfile
+    ports:
+      - "8081:8080"
+
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoDbSettings__ConnectionString=mongodb://192.168.0.20:27017
+      - MongoDbSettings__Database=ShortMyUrlDb
+    networks:
+      - shortmyurl-network
+
+networks:
+  shortmyurl-network:
+    driver: bridge

@@ -1,0 +1,11 @@
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\bin\Debug\net8.0\ShortMyUrl.Domain.deps.json
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\bin\Debug\net8.0\ShortMyUrl.Domain.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\bin\Debug\net8.0\ShortMyUrl.Domain.pdb
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ShortMyUrl.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ShortMyUrl.Domain.AssemblyInfoInputs.cache
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ShortMyUrl.Domain.AssemblyInfo.cs
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ShortMyUrl.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ShortMyUrl.Domain.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\refint\ShortMyUrl.Domain.dll
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ShortMyUrl.Domain.pdb
+C:\Users\Felipe Amorim\Projetos\Pessoal\DotNet\ShortMyUrl\ShortMyUrl.Domain\obj\Debug\net8.0\ref\ShortMyUrl.Domain.dll
