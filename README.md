@@ -27,10 +27,10 @@ Esse projeto também tem em JAVA 17
 **ShortMyUrl.API**
 Camada de apresentação com ASP.NET Core Web API. Responsável por receber requisições HTTP, validar entradas e retornar respostas apropriadas. Utiliza Swagger para documentação automática da API.
 
-ShortMyUrl.Domain
+**ShortMyUrl.Domain**
 Contém a lógica de negócio (serviços de domínio e regras de validação). É independente de tecnologias externas, promovendo baixo acoplamento.
 
-ShortMyUrl.Data
+**ShortMyUrl.Data**
 Camada de persistência de dados. Responsável por interagir com o MongoDB, utilizando repositórios genéricos e entidades persistentes.
 </p>
 
