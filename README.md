@@ -1,10 +1,10 @@
 # ShortMyUrl
 
-[![.NET 8](https://img.shields.io/badge/.NET-8-blueviolet?logo=dotnet)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb)](https://www.mongodb.com/)
-[![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://www.docker.com/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
-[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
+![.NET 8](https://img.shields.io/badge/.NET-8.0-%237025F7?style=for-the-badge&logo=dotnet&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-%2347A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Container-%230db7ed?style=for-the-badge&logo=docker&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-%23333?style=for-the-badge&logo=license&logoColor=white)
+![Build](https://img.shields.io/badge/Build-Passing-%2300C853?style=for-the-badge&logo=githubactions&logoColor=white)
 
 
 **ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. Ideal para criar, gerenciar e redirecionar links curtos de forma rápida e eficiente.
@@ -20,9 +20,8 @@ Esse projeto também tem em JAVA 17
 - Swagger (para testes e documentação da API)
 
 ## 📁 Arquitetura do Projeto
-<img src="IMG/DDD.png" alt="Ilustração de um computador" width="400px" align="left"/>
 
-<p>O projeto segue uma arquitetura modular baseada em camadas, com princípios de Domain-Driven Design (DDD) e separação de responsabilidades, facilitando manutenção, testes e escalabilidade.
+<p>O projeto segue uma arquitetura modular baseada em camadas, com princípios de <strong>Domain-Driven Design (DDD)</strong> e separação de responsabilidades, facilitando manutenção, testes e escalabilidade.
 
 **ShortMyUrl.API**
 Camada de apresentação com ASP.NET Core Web API. Responsável por receber requisições HTTP, validar entradas e retornar respostas apropriadas. Utiliza Swagger para documentação automática da API.
@@ -34,7 +33,7 @@ Contém a lógica de negócio (serviços de domínio e regras de validação). �
 Camada de persistência de dados. Responsável por interagir com o MongoDB, utilizando repositórios genéricos e entidades persistentes.
 </p>
 
-<img src="IMG/solid_principles.png" width="600px" align="center">
+<img src="IMG/Arquitetura do Projeto.png" width="100%" align="center">
 
 ## 🛠️ Como rodar o projeto
 
