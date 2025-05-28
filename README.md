@@ -11,7 +11,7 @@
 
 Esse projeto também tem em JAVA 17
 
-[![ShortMyUrl-JAVA](https://img.shields.io/badge/Repo-ShortMyUrl--JAVA-blue?style=for-the-badge&logo=github)](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-JAVA)
+[![ShortMyUrl-JAVA](https://img.shields.io/badge/Repo-ShortMyUrl--JAVA-red?style=for-the-badge&logo=github)](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-JAVA)
 
 ## 🚀 Tecnologias
 
