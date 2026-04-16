@@ -17,7 +17,8 @@
 - Swagger (para testes e documentação da API)
 
 ## 📁 Arquitetura do Projeto
-<img src="img/DDD.png" alt="Ilustração de um computador" width="400px" align="left"/>
+
+[![CodeFlow](https://img.shields.io/badge/CodeFlow-Ver%20Arquitetura-%23ff0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-DOTNET/?repo=Felipe-Amorim-Dev%2FShortMyUrl-DOTNET)
 
 <p>O projeto segue uma arquitetura modular baseada em camadas, com princípios de Domain-Driven Design (DDD) e separação de responsabilidades, facilitando manutenção, testes e escalabilidade.
 
@@ -31,7 +32,7 @@ ShortMyUrl.Data
 Camada de persistência de dados. Responsável por interagir com o MongoDB, utilizando repositórios genéricos e entidades persistentes.
 </p>
 
-<img src="img/solid_principles.png" width="600px" align="center">
+<img src="IMG/solid_principles.png" width="600px" align="center">
 
 ## 🛠️ Como rodar o projeto
 
