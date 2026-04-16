@@ -18,7 +18,7 @@
 
 ## 📁 Arquitetura do Projeto
 
-[![CodeFlow](https://img.shields.io/badge/CodeFlow-Ver%20Arquitetura-%23ff0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-DOTNET/docs/?repo=Felipe-Amorim-Dev%2ShortMyUrl-DOTNET)
+[![CodeFlow](https://img.shields.io/badge/CodeFlow-Ver%20Arquitetura-%23ff0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-DOTNET/?repo=Felipe-Amorim-Dev%2ShortMyUrl-DOTNET)
 
 <p>O projeto segue uma arquitetura modular baseada em camadas, com princípios de Domain-Driven Design (DDD) e separação de responsabilidades, facilitando manutenção, testes e escalabilidade.
 
