@@ -2307,7 +2307,7 @@ function App(){
     var _x=useState(null),folderFilter=_x[0],setFolderFilter=_x[1];
     var _y=useState(new Set()),expandedFns=_y[0],setExpandedFns=_y[1];
     var _z=useState(false),showUnused=_z[0],setShowUnused=_z[1];
-    var _aa=useState({spacing:200,linkDist:70,viewMode:'force',vizType:'graph',showLabels:true,curvedLinks:true}),graphConfig=_aa[0],setGraphConfig=_aa[1];
+    var _aa=useState({spacing:200,linkDist:70,viewMode:'force',vizType:'dendro',showLabels:true,curvedLinks:true}),graphConfig=_aa[0],setGraphConfig=_aa[1];
     var _ab=useState(false),showGraphConfig=_ab[0],setShowGraphConfig=_ab[1];
     var _ac=useState(260),sidebarWidth=_ac[0],setSidebarWidth=_ac[1];
     var _ad=useState(360),rightPanelWidth=_ad[0],setRightPanelWidth=_ad[1];
@@ -2330,14 +2330,7 @@ function App(){
 
     useEffect(function(){document.body.className=theme==='light'?'light':'';},[theme]);
 
-    useEffect(function(){
-        var params=new URLSearchParams(window.location.search);
-        var repo=params.get('repo');
-        if(repo&&repo.length<200&&!repo.includes('{')&&/^[a-zA-Z0-9_.\/-]+$/.test(repo)){
-            setRepoUrl(repo);
-            setTimeout(function(){var btn=document.getElementById('analyze-btn');if(btn)btn.click();},500);
-        }
-    },[]);
+    var _autoAnalyzed=useRef(false);
 
     function parseUrl(url){
         if(!url||typeof url!=='string')return null;
@@ -2350,8 +2343,10 @@ function App(){
         return null;
     }
 
-    function analyze(){
-        var p=parseUrl(repoUrl);
+    function analyze(repoOverride){
+        var targetRepo=typeof repoOverride==='string'&&repoOverride.trim()?repoOverride.trim():repoUrl;
+        if(targetRepo!==repoUrl)setRepoUrl(targetRepo);
+        var p=parseUrl(targetRepo);
         if(!p){setError('Invalid URL. Use format: owner/repo');return;}
         
         // Validate authentication inputs
@@ -2633,6 +2628,19 @@ function App(){
             processFile(0);
         }).catch(function(e){if(e!=='cancelled'){setError(e.message||e);setLoading(false);}});
     }
+
+    // Auto-analyze on first load: use ?repo= param or default to ShortMyUrl-DOTNET
+    useEffect(function(){
+        if(_autoAnalyzed.current)return;
+        _autoAnalyzed.current=true;
+        var params=new URLSearchParams(window.location.search);
+        var repo=params.get('repo')||'Felipe-Amorim-Dev/ShortMyUrl-DOTNET';
+        if(repo&&repo.length<200&&!repo.includes('{')&&/^[a-zA-Z0-9_.\/\-]+$/.test(repo)){
+            setRepoUrl(repo);
+            setGraphConfig(function(prev){return Object.assign({},prev,{vizType:'dendro'});});
+            setTimeout(function(){analyze(repo);},100);
+        }
+    },[]);
 
     function openLocalFolder(){
         if(!window.showDirectoryPicker){
