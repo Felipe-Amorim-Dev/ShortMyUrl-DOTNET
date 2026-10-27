@@ -1,0 +1,19 @@
+name: Compilação .NET
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  compilacao:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restaurar pacotes
+        run: dotnet restore
+      - name: Compilar solução
+        run: dotnet build --no-restore --configuration Release
