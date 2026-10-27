@@ -107,6 +107,6 @@ docker compose up --build
 curl -X POST http://localhost:8081/api/url/encurtar -H "Content-Type: application/json" -d '{"urlOriginal":"https://example.org/documentacao"}'
 ```
 
-Copie o endereço retornado em `url` e consulte-o com `curl -I`. O esperado é um redirecionamento HTTP **301** com cabeçalho `Location` apontando para a URL original. Em execução local sem Docker, altere `ShortUrl:BaseUrl` para a porta efetivamente publicada pelo ASP.NET Core.
+Copie o endereço retornado em `url` e consulte-o com `curl -i`. O esperado é um redirecionamento HTTP **301** com cabeçalho `Location` apontando para a URL original. Em execução local sem Docker, altere `ShortUrl:BaseUrl` para a porta efetivamente publicada pelo ASP.NET Core.
 
 **Atenção:** o redirecionamento ainda não foi validado por testes ponta a ponta. A CI atual verifica a compilação da solução, não o banco MongoDB em execução.
