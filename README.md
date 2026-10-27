@@ -4,10 +4,10 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb)](https://www.mongodb.com/)
 [![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
-[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
 
 
-**ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. Ideal para criar, gerenciar e redirecionar links curtos de forma rápida e eficiente.
+
+**ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. O cadastro e a exclusão de URLs estão implementados. **A geração de um link curto acessível e o redirecionamento HTTP ainda precisam de correção.** Não utilize a versão atual como encurtador em produção.
 
 ## 🚀 Tecnologias
 
@@ -86,6 +86,12 @@ networks:
 - `ShortMyUrl.API` — Camada de apresentação (Controllers e configurações).
 - `ShortMyUrl.Domain` — Regras de negócio.
 - `ShortMyUrl.Data` — Repositórios e acesso ao MongoDB.
+
+## Estado atual
+
+O método `Encurtar` ainda utiliza o domínio do endereço original para montar o link retornado, e a API não expõe uma rota GET para redirecionamento. Está previsto corrigir a base pública da URL, a resolução de códigos, o tratamento de colisões e testes de integração.
+
+A presença das camadas API, Domain e Data não significa adoção completa de DDD. O projeto é um exercício de organização em camadas.
 
 ## 📜 Licença
 
