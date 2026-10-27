@@ -8,10 +8,23 @@ services:
 
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - MongoDbSettings__ConnectionString=mongodb://192.168.0.20:27017
+      - MongoDbSettings__ConnectionString=mongodb://mongo:27017
       - MongoDbSettings__Database=ShortMyUrlDb
+      - ShortUrl__BaseUrl=http://localhost:8081
+    depends_on:
+      - mongo
     networks:
       - shortmyurl-network
+
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - shortmyurl-network
+
+volumes:
+  mongo_data:
 
 networks:
   shortmyurl-network:

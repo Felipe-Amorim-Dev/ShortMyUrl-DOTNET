@@ -7,7 +7,7 @@
 
 
 
-**ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. O cadastro e a exclusão de URLs estão implementados. **A geração de um link curto acessível e o redirecionamento HTTP ainda precisam de correção.** Não utilize a versão atual como encurtador em produção.
+**ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. O cadastro, a exclusão e a consulta de links curtos estão implementados nesta revisão. O fluxo completo exige um MongoDB acessível e validação de integração antes de ser apresentado como pronto para produção.
 
 ## 🚀 Tecnologias
 
@@ -89,7 +89,7 @@ networks:
 
 ## Estado atual
 
-O método `Encurtar` ainda utiliza o domínio do endereço original para montar o link retornado, e a API não expõe uma rota GET para redirecionamento. Está previsto corrigir a base pública da URL, a resolução de códigos, o tratamento de colisões e testes de integração.
+O método `Encurtar` usa a configuração `ShortUrl:BaseUrl` para formar o endereço da API, não mais o domínio do site de destino. O serviço gera um código aleatório de 12 caracteres e a rota `GET /r/{codigo}` busca o endereço no MongoDB para retornar um redirecionamento HTTP 301. Ainda é necessário testar colisões concorrentes e configurar um índice único no MongoDB antes de disponibilizar o sistema publicamente.
 
 A presença das camadas API, Domain e Data não significa adoção completa de DDD. O projeto é um exercício de organização em camadas.
 
@@ -97,3 +97,16 @@ A presença das camadas API, Domain e Data não significa adoção completa de D
 
 Este projeto está licenciado sob a licença MIT.
 
+
+## Como testar o fluxo
+
+O `docker-compose.yml` executa a API e uma instância local do MongoDB. Depois de iniciar os contêineres:
+
+```bash
+docker compose up --build
+curl -X POST http://localhost:8081/api/url/encurtar -H "Content-Type: application/json" -d '{"urlOriginal":"https://example.org/documentacao"}'
+```
+
+Copie o endereço retornado em `url` e consulte-o com `curl -i`. O esperado é um redirecionamento HTTP **301** com cabeçalho `Location` apontando para a URL original. Em execução local sem Docker, altere `ShortUrl:BaseUrl` para a porta efetivamente publicada pelo ASP.NET Core.
+
+**Atenção:** o redirecionamento ainda não foi validado por testes ponta a ponta. A CI atual verifica a compilação da solução, não o banco MongoDB em execução.

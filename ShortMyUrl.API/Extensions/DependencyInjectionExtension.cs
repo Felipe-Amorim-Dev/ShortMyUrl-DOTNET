@@ -1,28 +1,27 @@
-﻿using ShortMyUrl.Data.Repositories;
+using ShortMyUrl.Data.Repositories;
 using ShortMyUrl.Domain.Interfaces.Repositories;
 using ShortMyUrl.Domain.Interfaces.Services;
 using ShortMyUrl.Domain.Services;
 
 namespace ShortMyUrl.API.Extensions
 {
-    /// <summary>
-    /// Classe de extensão para configurar as injeções de dependência
-    /// das interfaces e classes do projeto
-    /// </summary>
     public static class DependencyInjectionExtension
     {
-        public static IServiceCollection AddDependencyInjection(this IServiceCollection services)
+        public static IServiceCollection AddDependencyInjection(this IServiceCollection services, IConfiguration configuration)
         {
-            #region Serviços de domínio
-
-            services.AddScoped<IUrlDomainService, UrlDomainService>();
-
-            #endregion
-
-            #region Repositórios
-
             services.AddScoped<IUrlRepository, UrlRepository>();
-            #endregion
+            services.AddScoped<IUrlDomainService>(provider =>
+            {
+                var repository = provider.GetRequiredService<IUrlRepository>();
+                var publicBaseUrl = configuration["ShortUrl:BaseUrl"];
+
+                if (string.IsNullOrWhiteSpace(publicBaseUrl))
+                {
+                    throw new InvalidOperationException("Configure ShortUrl:BaseUrl antes de iniciar o encurtador.");
+                }
+
+                return new UrlDomainService(repository, publicBaseUrl);
+            });
 
             return services;
         }

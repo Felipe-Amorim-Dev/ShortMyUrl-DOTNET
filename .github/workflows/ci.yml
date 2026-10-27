@@ -17,3 +17,6 @@ jobs:
         run: dotnet restore
       - name: Compilar solução
         run: dotnet build --no-restore --configuration Release
+
+      - name: Testar geração e resolução dos links
+        run: dotnet test ShortMyUrl.Tests/ShortMyUrl.Tests.csproj --configuration Release
