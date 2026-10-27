@@ -46,6 +46,26 @@ Swagger: http://localhost:8081/swagger
 
 - [ShortMyUrl-Web](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-Web) — Front-end Angular 19
 
+## 🏗️ Arquitetura e responsabilidades
+
+- ShortMyUrl.API contém UrlController, injeção de dependências e Swagger.
+- ShortMyUrl.Domain contém UrlDomainService, DTO, entidade Url e interfaces.
+- ShortMyUrl.Data implementa repositórios MongoDB; ShortMyUrl.Tests contém testes de domínio.
+
+### Fluxo de funcionamento
+
+1. POST /api/url/encurtar valida HTTP(S), cria código URL-safe de 12 caracteres e persiste URL original/curta.
+2. GET /r/{codigo} recupera a URL e retorna redirecionamento permanente HTTP 301.
+3. Docker Compose inicia API (porta 8081) e MongoDB 7 com volume de dados.
+
+### Execução local
+
+```bash
+docker compose up --build
+```
+
+Endereço do projeto: http://localhost:8081/swagger
+
 <a id="licenca"></a>
 ## 📄 Licença
 
