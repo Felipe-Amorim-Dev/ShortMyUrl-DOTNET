@@ -1,112 +1,61 @@
-# ShortMyUrl
+<p align="center"><img src="docs/Capa-ShortMyUrl.png" alt="Capa do projeto ShortMyUrl-DOTNET" width="100%" /></p>
 
-[![.NET 8](https://img.shields.io/badge/.NET-8-blueviolet?logo=dotnet)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb)](https://www.mongodb.com/)
-[![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://www.docker.com/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
+<h1 align="center">🔗 ShortMyUrl API</h1>
 
+<p align="center"><em>Encurtamento e redirecionamento de URLs usando .NET e MongoDB.</em></p>
 
+<p align="center">🇧🇷 Português | 🇺🇸 <a href="README.en.md">English</a></p>
 
-**ShortMyUrl** é uma aplicação web desenvolvida em .NET 8 para encurtamento de URLs, com backend em ASP.NET Core e persistência de dados no MongoDB. O cadastro, a exclusão e a consulta de links curtos estão implementados nesta revisão. O fluxo completo exige um MongoDB acessível e validação de integração antes de ser apresentado como pronto para produção.
+<p align="center"><img src="https://img.shields.io/badge/licen%C3%A7a-MIT-006bed?style=flat-square" alt="MIT" /> <img src="https://img.shields.io/github/last-commit/Felipe-Amorim-Dev/ShortMyUrl-DOTNET?style=flat-square&color=006bed" alt="Last commit" /></p>
 
-## 🚀 Tecnologias
+<p align="center"><a href="#sobre">Sobre</a> • <a href="#tecnologias">Tecnologias</a> • <a href="#como-rodar">Como rodar</a> • <a href="#licenca">Licença</a> • <a href="#autor">Autor</a></p>
 
-- .NET 8 (ASP.NET Core)
-- MongoDB
-- Docker & Docker Compose
-- Swagger (para testes e documentação da API)
+---
 
-## 📁 Arquitetura do Projeto
+<a id="sobre"></a>
+## 📖 Sobre
 
-[![CodeFlow](https://img.shields.io/badge/CodeFlow-Ver%20Arquitetura-%23ff0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-DOTNET/?repo=Felipe-Amorim-Dev%2ShortMyUrl-DOTNET)
+API ASP.NET Core 8 que gera identificadores curtos, persiste links no MongoDB e redireciona URLs pela rota GET /r/{codigo}. Conta com Docker Compose e documentação Swagger.
 
-<p>O projeto segue uma arquitetura modular baseada em camadas, com princípios de Domain-Driven Design (DDD) e separação de responsabilidades, facilitando manutenção, testes e escalabilidade.
+## ✨ Funcionalidades
 
-**ShortMyUrl.API**
-Camada de apresentação com ASP.NET Core Web API. Responsável por receber requisições HTTP, validar entradas e retornar respostas apropriadas. Utiliza Swagger para documentação automática da API.
+- Criar e consultar URLs curtas
+- Excluir links registrados
+- Redirecionar para URL original
 
-ShortMyUrl.Domain
-Contém a lógica de negócio (serviços de domínio e regras de validação). É independente de tecnologias externas, promovendo baixo acoplamento.
+## 🛠️ Tecnologias
 
-ShortMyUrl.Data
-Camada de persistência de dados. Responsável por interagir com o MongoDB, utilizando repositórios genéricos e entidades persistentes.
-</p>
+![C#](https://img.shields.io/badge/C%23-006bed?style=for-the-badge) ![.NET 8](https://img.shields.io/badge/.NET_8-006bed?style=for-the-badge) ![MongoDB 7](https://img.shields.io/badge/MongoDB_7-006bed?style=for-the-badge) ![Docker](https://img.shields.io/badge/Docker-006bed?style=for-the-badge) ![Swagger](https://img.shields.io/badge/Swagger-006bed?style=for-the-badge)
 
-<img src="IMG/solid_principles.png" width="600px" align="center">
+## 📦 Pré-requisitos
 
-## 🛠️ Como rodar o projeto
+Docker Engine e Docker Compose.
 
-### Pré-requisitos
-
-- [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-- [Docker](https://www.docker.com/)
-- [MongoDB Compass](https://www.mongodb.com/products/compass) (opcional)
-
-### MongoDB Container (independente)
-
-Primeiro crie a rede interna do docker
-```bash
-docker network create nome-da-sua-network
-```
-Depois crie o container para o mongoDb
+<a id="como-rodar"></a>
+## 🚀 Como rodar
 
 ```bash
-docker run -d --name mongodb-container -p 27017:27017 --network nome-da-sua-network mongo
-```
-
-### Rodando a API
-
-Abra um terminal onde o arquivo **docker-compose.yml** está e rode o comando abaixo:
-
-```bash
+git clone https://github.com/Felipe-Amorim-Dev/ShortMyUrl-DOTNET.git
+cd ShortMyUrl-DOTNET
 docker compose up --build
 ```
 
-Acesse em: [http://localhost:8081/swagger](http://localhost:8081/swagger)
+Swagger: http://localhost:8081/swagger
 
-## 🔧 Configurações
+## 🔗 Repositórios relacionados
 
-```yaml
-# docker-compose.yml (exemplo)
-services:
-  shortmyurl-api:
-    ...
-    environment:
-      - MongoDbSettings__ConnectionString=mongodb://mongodb-container:27017
-    networks:
-      - shortmyurl-network
+- [ShortMyUrl-Web](https://github.com/Felipe-Amorim-Dev/ShortMyUrl-Web) — Front-end Angular 19
 
-networks:
-  shortmyurl-network:
-    name: shortmyurl-network
-```
+<a id="licenca"></a>
+## 📄 Licença
 
-## 📁 Estrutura
+Distribuído sob a [licença MIT](LICENSE).
 
-- `ShortMyUrl.API` — Camada de apresentação (Controllers e configurações).
-- `ShortMyUrl.Domain` — Regras de negócio.
-- `ShortMyUrl.Data` — Repositórios e acesso ao MongoDB.
+<a id="autor"></a>
+## 👤 Autor
 
-## Estado atual
+**Felipe Figueiredo Amorim** — Desenvolvedor Full Stack.
 
-O método `Encurtar` usa a configuração `ShortUrl:BaseUrl` para formar o endereço da API, não mais o domínio do site de destino. O serviço gera um código aleatório de 12 caracteres e a rota `GET /r/{codigo}` busca o endereço no MongoDB para retornar um redirecionamento HTTP 301. Ainda é necessário testar colisões concorrentes e configurar um índice único no MongoDB antes de disponibilizar o sistema publicamente.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Felipe%20Amorim-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/felipe-amorim-dev/) [![E-mail](https://img.shields.io/badge/E--mail-contato-006bed?style=for-the-badge)](mailto:felipe.f.amorim@outlook.com)
 
-A presença das camadas API, Domain e Data não significa adoção completa de DDD. O projeto é um exercício de organização em camadas.
-
-## 📜 Licença
-
-Este projeto está licenciado sob a licença MIT.
-
-
-## Como testar o fluxo
-
-O `docker-compose.yml` executa a API e uma instância local do MongoDB. Depois de iniciar os contêineres:
-
-```bash
-docker compose up --build
-curl -X POST http://localhost:8081/api/url/encurtar -H "Content-Type: application/json" -d '{"urlOriginal":"https://example.org/documentacao"}'
-```
-
-Copie o endereço retornado em `url` e consulte-o com `curl -i`. O esperado é um redirecionamento HTTP **301** com cabeçalho `Location` apontando para a URL original. Em execução local sem Docker, altere `ShortUrl:BaseUrl` para a porta efetivamente publicada pelo ASP.NET Core.
-
-**Atenção:** o redirecionamento ainda não foi validado por testes ponta a ponta. A CI atual verifica a compilação da solução, não o banco MongoDB em execução.
+<p align="center"><strong>Obrigado por visitar! / Thanks for visiting!</strong></p>
