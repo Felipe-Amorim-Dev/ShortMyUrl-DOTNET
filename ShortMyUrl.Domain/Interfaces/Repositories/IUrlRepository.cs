@@ -1,14 +1,10 @@
-﻿using ShortMyUrl.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ShortMyUrl.Domain.Entities;
 
 namespace ShortMyUrl.Domain.Interfaces.Repositories
 {
     public interface IUrlRepository : IBaseRepository<Url>
     {
-        Task<Url> GetByUrlOrigin(string urlOriginal);
+        Task<Url?> GetByUrlOrigin(string urlOriginal);
+        Task<Url?> GetByUrlNova(string urlNova);
     }
 }
