@@ -12,6 +12,9 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="../ShortMyUrl.Domain/ShortMyUrl.Domain.csproj" />
   </ItemGroup>
 </Project>
